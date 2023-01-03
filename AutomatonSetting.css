@@ -6,6 +6,9 @@ th, td {
     border-color: #a0a0a0;
     height: 2ex;
 }
+tr.summary td {
+    background-color: #808080;
+}
 td.name {
     width: 12em;
 }
