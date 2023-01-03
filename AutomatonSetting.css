@@ -1,0 +1,45 @@
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: solid 1px;
+    border-color: #a0a0a0;
+    height: 2ex;
+}
+td.name {
+    width: 12em;
+}
+th.element {
+    width: 2em;
+}
+td.element {
+    text-align: right;
+}
+td.alert {
+    background-color: red;
+}
+
+th.element0 {
+    background-color: #ff8080;
+}
+th.element1 {
+    background-color: #c0c0ff;
+}
+th.element2 {
+    background-color: #80ff80;
+}
+th.element3 {
+    background-color: #ffff80;
+}
+th.element4 {
+    background-color: #ff80ff;
+}
+th.element5 {
+    background-color: #8080ff;
+}
+th.element6 {
+    background-color: #ffffff;
+}
+th.element7 {
+    background-color: #808080;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="AutomatonSetting.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="AutomatonSetting.js"></script>
+    <script>$(setup)</script>
+    <title>Automaton Setting</title>
+  </head>
+  <body>
+    <h1>Automaton Setting</h1>
+    <table class="summary">
+      <tr>
+	<th class="category">区分</th>
+	<th class="name">名称</th>
+	<th class="element element0">火</th>
+	<th class="element element1">氷</th>
+	<th class="element element2">風</th>
+	<th class="element element3">土</th>
+	<th class="element element4">雷</th>
+	<th class="element element5">水</th>
+	<th class="element element6">光</th>
+	<th class="element element7">闇</th>
+      </tr>
+      <tr>
+	<td colspan="2">合計</td>
+	<td class="element"><span id="element0sum">0</span></td>
+	<td class="element"><span id="element1sum">0</span></td>
+	<td class="element"><span id="element2sum">0</span></td>
+	<td class="element"><span id="element3sum">0</span></td>
+	<td class="element"><span id="element4sum">0</span></td>
+	<td class="element"><span id="element5sum">0</span></td>
+	<td class="element"><span id="element6sum">0</span></td>
+	<td class="element"><span id="element7sum">0</span></td>
+      </tr>
+      <tr>
+	<td colspan="2">上限</td>
+	<td class="element"><span id="element0cap">0</span></td>
+	<td class="element"><span id="element1cap">0</span></td>
+	<td class="element"><span id="element2cap">0</span></td>
+	<td class="element"><span id="element3cap">0</span></td>
+	<td class="element"><span id="element4cap">0</span></td>
+	<td class="element"><span id="element5cap">0</span></td>
+	<td class="element"><span id="element6cap">0</span></td>
+	<td class="element"><span id="element7cap">0</span></td>
+      </tr>
+      <tr>
+	<th colspan="10">構成</td>
+      </tr>
+      <tr>
+	<td clsss="category">ヘッド</td>
+	<td class="name"><span id="name_head"><span></td>
+	<td class="element"><span id="element0head">0</span></td>
+	<td class="element"><span id="element1head">0</span></td>
+	<td class="element"><span id="element2head">0</span></td>
+	<td class="element"><span id="element3head">0</span></td>
+	<td class="element"><span id="element4head">0</span></td>
+	<td class="element"><span id="element5head">0</span></td>
+	<td class="element"><span id="element6head">0</span></td>
+	<td class="element"><span id="element7head">0</span></td>
+      </tr>
+      <tr>
+	<td class="category">フレーム</td>
+	<td class="name"><span id="name_frame"><span></td>
+	<td class="element"><span id="element0frame">0</span></td>
+	<td class="element"><span id="element1frame">0</span></td>
+	<td class="element"><span id="element2frame">0</span></td>
+	<td class="element"><span id="element3frame">0</span></td>
+	<td class="element"><span id="element4frame">0</span></td>
+	<td class="element"><span id="element5frame">0</span></td>
+	<td class="element"><span id="element6frame">0</span></td>
+	<td class="element"><span id="element7frame">0</span></td>
+      </tr>
+      <tr>
+	<td class="category" rowspan="16">アタッチメント</td>
+	<td class="name"><span id="name_a00"><span></td>
+	<td class="element"><span id="element0a00"></span></td>
+	<td class="element"><span id="element1a00"></span></td>
+	<td class="element"><span id="element2a00"></span></td>
+	<td class="element"><span id="element3a00"></span></td>
+	<td class="element"><span id="element4a00"></span></td>
+	<td class="element"><span id="element5a00"></span></td>
+	<td class="element"><span id="element6a00"></span></td>
+	<td class="element"><span id="element7a00"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a01"><span></td>
+	<td class="element"><span id="element0a01"></span></td>
+	<td class="element"><span id="element1a01"></span></td>
+	<td class="element"><span id="element2a01"></span></td>
+	<td class="element"><span id="element3a01"></span></td>
+	<td class="element"><span id="element4a01"></span></td>
+	<td class="element"><span id="element5a01"></span></td>
+	<td class="element"><span id="element6a01"></span></td>
+	<td class="element"><span id="element7a01"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a02"><span></td>
+	<td class="element"><span id="element0a02"></span></td>
+	<td class="element"><span id="element1a02"></span></td>
+	<td class="element"><span id="element2a02"></span></td>
+	<td class="element"><span id="element3a02"></span></td>
+	<td class="element"><span id="element4a02"></span></td>
+	<td class="element"><span id="element5a02"></span></td>
+	<td class="element"><span id="element6a02"></span></td>
+	<td class="element"><span id="element7a02"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a03"><span></td>
+	<td class="element"><span id="element0a03"></span></td>
+	<td class="element"><span id="element1a03"></span></td>
+	<td class="element"><span id="element2a03"></span></td>
+	<td class="element"><span id="element3a03"></span></td>
+	<td class="element"><span id="element4a03"></span></td>
+	<td class="element"><span id="element5a03"></span></td>
+	<td class="element"><span id="element6a03"></span></td>
+	<td class="element"><span id="element7a03"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a04"><span></td>
+	<td class="element"><span id="element0a04"></span></td>
+	<td class="element"><span id="element1a04"></span></td>
+	<td class="element"><span id="element2a04"></span></td>
+	<td class="element"><span id="element3a04"></span></td>
+	<td class="element"><span id="element4a04"></span></td>
+	<td class="element"><span id="element5a04"></span></td>
+	<td class="element"><span id="element6a04"></span></td>
+	<td class="element"><span id="element7a04"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a05"><span></td>
+	<td class="element"><span id="element0a05"></span></td>
+	<td class="element"><span id="element1a05"></span></td>
+	<td class="element"><span id="element2a05"></span></td>
+	<td class="element"><span id="element3a05"></span></td>
+	<td class="element"><span id="element4a05"></span></td>
+	<td class="element"><span id="element5a05"></span></td>
+	<td class="element"><span id="element6a05"></span></td>
+	<td class="element"><span id="element7a05"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a06"><span></td>
+	<td class="element"><span id="element0a06"></span></td>
+	<td class="element"><span id="element1a06"></span></td>
+	<td class="element"><span id="element2a06"></span></td>
+	<td class="element"><span id="element3a06"></span></td>
+	<td class="element"><span id="element4a06"></span></td>
+	<td class="element"><span id="element5a06"></span></td>
+	<td class="element"><span id="element6a06"></span></td>
+	<td class="element"><span id="element7a06"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a07"><span></td>
+	<td class="element"><span id="element0a07"></span></td>
+	<td class="element"><span id="element1a07"></span></td>
+	<td class="element"><span id="element2a07"></span></td>
+	<td class="element"><span id="element3a07"></span></td>
+	<td class="element"><span id="element4a07"></span></td>
+	<td class="element"><span id="element5a07"></span></td>
+	<td class="element"><span id="element6a07"></span></td>
+	<td class="element"><span id="element7a07"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a08"><span></td>
+	<td class="element"><span id="element0a08"></span></td>
+	<td class="element"><span id="element1a08"></span></td>
+	<td class="element"><span id="element2a08"></span></td>
+	<td class="element"><span id="element3a08"></span></td>
+	<td class="element"><span id="element4a08"></span></td>
+	<td class="element"><span id="element5a08"></span></td>
+	<td class="element"><span id="element6a08"></span></td>
+	<td class="element"><span id="element7a08"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a09"><span></td>
+	<td class="element"><span id="element0a09"></span></td>
+	<td class="element"><span id="element1a09"></span></td>
+	<td class="element"><span id="element2a09"></span></td>
+	<td class="element"><span id="element3a09"></span></td>
+	<td class="element"><span id="element4a09"></span></td>
+	<td class="element"><span id="element5a09"></span></td>
+	<td class="element"><span id="element6a09"></span></td>
+	<td class="element"><span id="element7a09"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a10"><span></td>
+	<td class="element"><span id="element0a10"></span></td>
+	<td class="element"><span id="element1a10"></span></td>
+	<td class="element"><span id="element2a10"></span></td>
+	<td class="element"><span id="element3a10"></span></td>
+	<td class="element"><span id="element4a10"></span></td>
+	<td class="element"><span id="element5a10"></span></td>
+	<td class="element"><span id="element6a10"></span></td>
+	<td class="element"><span id="element7a10"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a11"><span></td>
+	<td class="element"><span id="element0a11"></span></td>
+	<td class="element"><span id="element1a11"></span></td>
+	<td class="element"><span id="element2a11"></span></td>
+	<td class="element"><span id="element3a11"></span></td>
+	<td class="element"><span id="element4a11"></span></td>
+	<td class="element"><span id="element5a11"></span></td>
+	<td class="element"><span id="element6a11"></span></td>
+	<td class="element"><span id="element7a11"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a12"><span></td>
+	<td class="element"><span id="element0a12"></span></td>
+	<td class="element"><span id="element1a12"></span></td>
+	<td class="element"><span id="element2a12"></span></td>
+	<td class="element"><span id="element3a12"></span></td>
+	<td class="element"><span id="element4a12"></span></td>
+	<td class="element"><span id="element5a12"></span></td>
+	<td class="element"><span id="element6a12"></span></td>
+	<td class="element"><span id="element7a12"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a13"><span></td>
+	<td class="element"><span id="element0a13"></span></td>
+	<td class="element"><span id="element1a13"></span></td>
+	<td class="element"><span id="element2a13"></span></td>
+	<td class="element"><span id="element3a13"></span></td>
+	<td class="element"><span id="element4a13"></span></td>
+	<td class="element"><span id="element5a13"></span></td>
+	<td class="element"><span id="element6a13"></span></td>
+	<td class="element"><span id="element7a13"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a14"><span></td>
+	<td class="element"><span id="element0a14"></span></td>
+	<td class="element"><span id="element1a14"></span></td>
+	<td class="element"><span id="element2a14"></span></td>
+	<td class="element"><span id="element3a14"></span></td>
+	<td class="element"><span id="element4a14"></span></td>
+	<td class="element"><span id="element5a14"></span></td>
+	<td class="element"><span id="element6a14"></span></td>
+	<td class="element"><span id="element7a14"></span></td>
+      </tr>
+      <tr>
+	<td class="name"><span id="name_a15"><span></td>
+	<td class="element"><span id="element0a15"></span></td>
+	<td class="element"><span id="element1a15"></span></td>
+	<td class="element"><span id="element2a15"></span></td>
+	<td class="element"><span id="element3a15"></span></td>
+	<td class="element"><span id="element4a15"></span></td>
+	<td class="element"><span id="element5a15"></span></td>
+	<td class="element"><span id="element6a15"></span></td>
+	<td class="element"><span id="element7a15"></span></td>
+      </tr>
+    </table>
+  </body>
+</html>
